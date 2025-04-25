@@ -38,4 +38,4 @@ Un site statique, si léger qu’il se charge même sur un vieux PC ou une 3 G f
 **Guide Autonomie**, c’est la notice illustrée de la vie quotidienne, accessible à tout instant, pour que chaque geste redevienne simple.
 
 
-![alt text](image.png)
+![alt text](assets/images/image.png)
