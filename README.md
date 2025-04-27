@@ -5,6 +5,7 @@
 2. [Notre projet : **Guide Autonomie, le web-support ultra-léger pour les aides à domicile**](#2)  
 3. [Guide de démarrage](#3)  
 4. [Guide de développement](#4)  
+5. [Navigateur supportés](#5)  
 
 <a id="1"></a>
 ## 1. Sujet du projet final **Application web ultra-légère**
@@ -39,7 +40,7 @@ Un site statique, si léger qu’il se charge même sur un vieux PC ou en 3G fai
 
 **Guide Autonomie** : c’est la notice illustrée de la vie quotidienne, accessible à tout instant, pour que chaque geste redevienne simple.
 
-![Illustration du Guide Autonomie](./ressources/image.png)
+![Illustration du Guide Autonomie](./ressources/preview.png)
 
 <a id="3"></a>
 ## 3. Guide de démarrage
@@ -72,9 +73,7 @@ npm run prod
 src/
 ├── html/
 │   ├── index.html
-│   ├── about.html
-│   └── articles/
-│       └── article1.html
+│   └── about.html
 ├── css/
 │   ├── base.css
 │   ├── index.css
@@ -130,6 +129,8 @@ npm run dev
 npm run build
 ```
 - Génére `dist/` : HTML, CSS, JS minifiés + assets optimisés.
+
+Ouvrir /dist/index.html avec 
 
 ---
 
@@ -238,14 +239,7 @@ Pour les utiliser dans ton HTML :
 **Important** :  
 **Ne saute pas l’étape Webpack** : sans l’entrée `entry` et le `HtmlWebpackPlugin`, ton HTML ne sera **pas relié** à ton JS ni à ton CSS.
 
----
+<a id="5"></a>
+## 5. Navigateur supportés
 
-**Résumé final** :  
-Tu peux ajouter une page complète (HTML, CSS, JS, assets) sans jamais toucher directement aux `<script>` ni `<link>`.  
-Laisse Webpack faire le sale boulot.  
-Si tu suis les étapes, ta page sera intégrée automatiquement dans le projet, avec tous les avantages : performance, accessibilité, compatibilité maximale.
-
----
-
-Veux-tu aussi que je te prépare directement une version prête à coller de la mise à jour du README complet ?  
-(Je peux aussi te proposer une mini checklist rapide pour les nouveaux contributeurs, si tu veux.)
+![alt text](./ressources/support_nav.png)
