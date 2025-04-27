@@ -243,3 +243,13 @@ Pour les utiliser dans ton HTML :
 ## 5. Navigateur supportés
 
 ![alt text](./ressources/support_nav.png)
+
+
+<a id="6"></a>
+## 6. Tools
+
+Deux outils dans la console de chrome qui on l'air sympa 
+
+![chrome_performance](./ressources/chrome_perf.png)
+
+![chrome_lighthouse](./ressources/chrome_lighthouse.png)
