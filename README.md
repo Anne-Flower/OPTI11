@@ -242,7 +242,18 @@ Pour les utiliser dans ton HTML :
 <a id="5"></a>
 ## 5. Navigateur supportés
 
+- Chrome - 10
+- Firefox - 4 
+- Safari - 6 
+- Edge - 12
+- Internet Explorer - IE 9
+- Opera - 11
+
 ![alt text](./ressources/support_nav.png)
+
+Creation VM debian 12
+
+root changeme user changeme
 
 
 <a id="6"></a>
