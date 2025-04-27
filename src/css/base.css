@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'AtkinsonHyperlegible';
+  src: url('../assets/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  font-family: 'AtkinsonHyperlegible';
+  background-color: #ffffff;
+  color: #333333;
+}
+
+header {
+  background-color: #004080;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'AtkinsonHyperlegible';
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+img{
+  display: block;
+  min-height: 1rem;
+}
