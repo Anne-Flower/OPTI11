@@ -45,14 +45,6 @@ footer{
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
-#footer-logo{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-width: 210px;
-    width: 15%;
-}
-
 .footer-lien{
     display: flex;
     flex-direction: column;
@@ -73,7 +65,43 @@ footer ul {
     list-style-type: none;
 }
 
-@media screen and (max-width: 800px) {
+/*logo*/
+.site-name {
+    font-size: var(--text-h3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-subtitle {
+    display: inline-block;
+    font-weight: bold;
+    font-family: var(--font-bold);
+    letter-spacing: 0.3rem;
+    font-size: var(--text-h2);
+    margin-top: 0.25rem;
+  }
+  
+  .logo-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    margin-right: 0.5rem;
+  }
+  
+  .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+@media screen and (max-width: 850px) {
     footer {
         flex-direction: column;
         height: 350px;
