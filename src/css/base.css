@@ -18,10 +18,15 @@
   font-display: swap;
 }
 
+
+
 :root {
-  --color-primary: #005a9c; /* Bleu accessible */
-  --color-secondary: #d6eaf8; /* Bleu clair (header/footer) */
-  --color-white: #ffffff;
+  --color-primary: #005A9C;
+  /* Bleu accessible */
+  --color-secondary: #D6EAF8;
+  /* Bleu clair (header/footer) */
+  --color-white: #FFFFFF;
+
   --color-black: #000000;
 
   --font-base: "Atkinson Hyperlegible", sans-serif;
@@ -34,7 +39,8 @@
   --text-h5: 1.25rem; /* 20px */
   --text-body: 1rem; /* 16px */
 
-  --lh-default: 1.5rem; /* 24px */
+  --lh-default: 1.5em;
+  /* 24px */
 }
 
 * {
@@ -44,7 +50,8 @@
 }
 
 html {
-  font-size: 100%; /* 1rem = 16px */
+  font-size: 100%;
+  /* 1rem = 16px */
   line-height: var(--lh-default);
 }
 
@@ -108,7 +115,7 @@ header {
   border-bottom: 2px solid #005a9c;
 }
 
-p + p {
+p+p {
   margin-top: 2rem;
 }
 
@@ -176,6 +183,7 @@ body {
 }
 
 footer {
+  height: 256px;
   width: 100%;
   background-color: var(--color-secondary);
   display: flex;
@@ -187,6 +195,7 @@ footer {
   font-family: "Atkinson Hyperlegible", sans-serif;
   padding: 2rem;
   gap: 50px;
+
 }
 
 .footer-lien {
@@ -246,6 +255,18 @@ footer ul {
   gap: 5px;
 }
 
+@media screen and (max-width: 850px) {
+  footer {
+    flex-direction: column;
+    height: 350px;
+  }
+
+  .footer-lien {
+    width: 100%;
+  }
+
+}
+
 /* description_card */
 .description_card_border {
   padding: 1rem;
@@ -256,6 +277,7 @@ footer ul {
   gap: 20px;
   align-items: center;
 }
+
 .description_card_content {
   display: flex;
   flex-direction: column;
