@@ -99,7 +99,7 @@ a:focus {
   outline-offset: 4px;
 }
 
-header, footer {
+header {
   background-color: var(--color-secondary);
   color: var(--color-black);
   padding: 2rem;
@@ -171,4 +171,87 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+footer{
+  height: 256px;
+  width: 100%;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid var(--color-primary);
+  font-size: var(--text-h3);
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  padding: 0 2rem;
+  
+}
+
+.footer-lien{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  gap: 18px;
+  width: 70%;
+  height: 140px;
+  flex-wrap: wrap;
+}
+
+footer a{
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+/*logo*/
+.site-name {
+  font-size: var(--text-h3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-subtitle {
+  display: inline-block;
+  font-weight: bold;
+  font-family: var(--font-bold);
+  letter-spacing: 0.3rem;
+  font-size: var(--text-h2);
+  margin-top: 0.25rem;
+}
+
+.logo-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  margin-right: 0.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 850px) {
+  footer {
+      flex-direction: column;
+      height: 350px;
+  }
+
+  .footer-lien{
+      width: 100%;
+  }
 }
