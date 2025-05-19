@@ -47,6 +47,10 @@ h2 {
   text-align: center;
 }
 
+.principal h1, .principal h2 {
+  text-align: left;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 600px) {
