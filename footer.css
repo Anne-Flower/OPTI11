@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/assets/fonts/subset-AtkinsonHyperlegible-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/assets/fonts/subset-AtkinsonHyperlegible-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-primary: #005A9C;      /* Bleu accessible */
+    --color-secondary: #D6EAF8;    /* Bleu clair (header/footer) */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+  
+    --font-base: 'Atkinson Hyperlegible', sans-serif;
+  
+    --text-h1: 2.5rem;   /* 40px */
+    --text-h2: 2rem;     /* 32px */
+    --text-h3: 1.5rem;   /* 24px */
+    --text-h4: 1.25rem;  /* 20px */
+    --text-h5: 1.25rem;  /* 20px */
+    --text-body: 1rem;   /* 16px */
+  
+    --lh-default: 1.5rem; /* 24px */
+}
+
+footer{
+    height: 256px;
+    width: 100%;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid var(--color-primary);
+    font-size: var(--text-h3);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.footer-lien{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    gap: 18px;
+    width: 70%;
+    height: 140px;
+    flex-wrap: wrap;
+}
+
+footer a{
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+/*logo*/
+.site-name {
+    font-size: var(--text-h3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-subtitle {
+    display: inline-block;
+    font-weight: bold;
+    font-family: var(--font-bold);
+    letter-spacing: 0.3rem;
+    font-size: var(--text-h2);
+    margin-top: 0.25rem;
+  }
+  
+  .logo-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    margin-right: 0.5rem;
+  }
+  
+  .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+@media screen and (max-width: 850px) {
+    footer {
+        flex-direction: column;
+        height: 350px;
+    }
+
+    .footer-lien{
+        width: 100%;
+    }
+  }
