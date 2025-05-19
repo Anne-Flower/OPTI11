@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  chrome10:
+    build: ./chrome10
+    ports:
+      - "6081:6080"
+    container_name: chrome10-legacy
+
+  firefox4:
+    build: ./firefox4
+    ports:
+      - "6082:6080"
+    container_name: firefox4-legacy
+
+  opera11:
+    build: ./opera11
+    ports:
+      - "6083:6080"
+    container_name: opera11-legacy

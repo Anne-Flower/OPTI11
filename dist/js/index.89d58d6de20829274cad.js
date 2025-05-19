@@ -1,0 +1,1 @@
+!function(){"use strict";document.addEventListener("DOMContentLoaded",(function(){showWelcomeMessage("Bienvenue sur la page d'accueil !")}))}();

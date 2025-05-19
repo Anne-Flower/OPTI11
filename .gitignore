@@ -1,0 +1,56 @@
+# ─── Dépendances Node ────────────────────────────────────────────────
+node_modules/
+
+# ─── Fichiers de logs ───────────────────────────────────────────────
+# Logs d’erreurs et de débogage npm / yarn / pnpm
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# ─── Sorties de build / artefacts ───────────────────────────────────
+build/
+coverage/
+.tmp/
+out/
+
+# ─── Fichiers d’environnement ────────────────────────────────────────
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ─── Caches divers ──────────────────────────────────────────────────
+# Babel, ESLint, Jest, TypeScript…
+.cache/
+.next/
+.nuxt/
+.vscode/
+.idea/
+*.tsbuildinfo
+.eslintcache
+
+# ─── Fichiers système ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Fichiers de configuration locale / IDE ─────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ─── Yarn Integrity ──────────────────────────────────────────────────
+.yarn-integrity
+
+# ─── PID et runtimes ─────────────────────────────────────────────────
+pids/
+*.pid
+*.seed
+
+# ─── Autres ──────────────────────────────────────────────────────────
+*.log.*
