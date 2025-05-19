@@ -1,9 +1,9 @@
 name: Deploy on GitHub Pages
 on:
   push:
-    branches: [ "feature/ci_cd" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "feature/ci_cd" ]
+    branches: [ "main" ]
     
 permissions:
   contents: write
