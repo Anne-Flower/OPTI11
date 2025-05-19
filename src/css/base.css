@@ -38,7 +38,7 @@
 
 * {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -59,7 +59,7 @@ h1 {
   font-size: var(--text-h1);
   line-height: var(--lh-default);
   font-weight: 700;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 h2 {
@@ -86,7 +86,7 @@ h4, h5 {
 p {
   font-size: var(--text-body);
   line-height: var(--lh-default);
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   max-width: 65ch;
 }
 
@@ -255,3 +255,21 @@ footer ul {
       width: 100%;
   }
 }
+
+/* description_card */
+.description_card_border{
+  padding: 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center
+}
+.description_card_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
