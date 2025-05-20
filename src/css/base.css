@@ -18,14 +18,12 @@
   font-display: swap;
 }
 
-
-
 :root {
-  --color-primary: #005A9C;
+  --color-primary: #005a9c;
   /* Bleu accessible */
-  --color-secondary: #D6EAF8;
+  --color-secondary: #d6eaf8;
   /* Bleu clair (header/footer) */
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
 
   --color-black: #000000;
 
@@ -115,7 +113,7 @@ header {
   border-bottom: 2px solid #005a9c;
 }
 
-p+p {
+p + p {
   margin-top: 2rem;
 }
 
@@ -195,7 +193,6 @@ footer {
   font-family: "Atkinson Hyperlegible", sans-serif;
   padding: 2rem;
   gap: 50px;
-
 }
 
 .footer-lien {
@@ -264,7 +261,6 @@ footer ul {
   .footer-lien {
     width: 100%;
   }
-
 }
 
 /* description_card */
@@ -315,11 +311,18 @@ footer ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .principal {
   display: flex;
   gap: 2rem;
+  max-width: 850px;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 750px) {
@@ -363,5 +366,9 @@ footer ul {
 
   .description_card_border {
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: var(--text-h3);
   }
 }

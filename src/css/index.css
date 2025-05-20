@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -47,8 +46,13 @@ h2 {
   text-align: center;
 }
 
-.principal h1, .principal h2 {
+.principal h1,
+.principal h2 {
   text-align: left;
+}
+
+.principal h2 {
+  margin-bottom: unset;
 }
 
 /* Media queries */
