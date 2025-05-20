@@ -51,6 +51,10 @@ h2 {
   text-align: left;
 }
 
+.principal h2 {
+  margin-bottom: unset;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 600px) {
