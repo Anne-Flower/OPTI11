@@ -8,8 +8,16 @@
   "license": "ISC",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "npm run clean && webpack --mode production",
-    "clean": "rimraf dist"
+    "build-old": "npm run clean && webpack --mode production",
+    "clean": "rimraf dist",
+    "build:html": "find src -name '*.html' -exec sh -c 'for f; do mkdir -p dist/$(dirname \"$f\" | cut -c5-); html-minifier-terser --collapse-whitespace --remove-comments \"$f\" -o dist/${f#src/}; done' sh {} +",
+    "build:css": "find src -name '*.css' -exec sh -c 'for f; do mkdir -p dist/$(dirname \"$f\" | cut -c5-); cleancss -o dist/${f#src/%.css/.min.css} \"$f\"; done' sh {} +",
+    "build:purgecss": "purgecss --css 'dist/**/*.min.css' --content 'src/**/*.html' 'src/**/*.js' --output dist/",
+    "build:js": "terser 'src/**/*.js' -o dist --compress --mangle -p relative",
+    "build:images": "npx imagemin 'src/images/*.{jpg,png,svg}' --plugin=mozjpeg --plugin=pngquant --plugin=svgo --out-dir=dist/images",
+    "update:html:css": "find dist -name '*.html' -exec sed -i 's/\\.css/\\.min.css/g' {} +",
+    "update:html:js": "find dist -name '*.html' -exec sed -i 's/\\.js/\\.min.js/g' {} +",
+    "build": "npm run build:html && npm run build:css && npm run build:purgecss && npm run build:js && npm run build:images && npm run update:html:css && npm run update:html:js"
   },
   "browserslist": [
     "> 0.1%",
@@ -17,29 +25,14 @@
     "ie >= 9"
   ],
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "autoprefixer": "^10.4.21",
-    "babel-loader": "^9.2.1",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^13.0.0",
-    "core-js": "^3.41.0",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.2",
-    "file-loader": "^6.2.0",
-    "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.3",
-    "image-minimizer-webpack-plugin": "^4.1.3",
-    "image-webpack-loader": "^8.1.0",
-    "imagemin-jpegtran": "^8.0.0",
-    "mini-css-extract-plugin": "^2.9.2",
-    "postcss-loader": "^8.1.1",
-    "style-loader": "^4.0.0",
-    "svgo-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.3.14",
-    "webpack": "^5.99.7",
-    "webpack-bundle-analyzer": "^4.10.2",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "clean-css": "^5.3.3",
+    "cssnano": "^7.0.7",
+    "html-minifier-terser": "^7.2.0",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "purgecss": "^7.0.2",
+    "terser": "^5.39.2"
   }
 }
