@@ -60,17 +60,24 @@ const copyAndMinify = async () => {
 
   // Minify HTML + update references
   for (const file of htmlFiles) {
-    const relPath = file.replace(`${SRC_DIR}/`, '');
+    const relPath = file.replace(`${SRC_DIR}/html/`, '');
     const dest = path.join(DIST_DIR, relPath);
     let content = fs.readFileSync(file, 'utf8');
 
-    // Replace .css/.js with .min.css/.min.js
     for (const [original, minified] of cssMap.entries()) {
-      content = content.replace(new RegExp(original.replace('.', '\\.'), 'g'), minified);
+      const baseName = path.basename(original);
+      const regex = new RegExp(`(\\.{1,2}\\/)?css\\/${baseName}`, 'g');
+      content = content.replace(regex, `./css/${path.basename(minified)}`);
     }
+
     for (const [original, minified] of jsMap.entries()) {
-      content = content.replace(new RegExp(original.replace('.', '\\.'), 'g'), minified);
+      const baseName = path.basename(original);
+      const regex = new RegExp(`(\\.{1,2}\\/)?js\\/${baseName}`, 'g');
+      content = content.replace(regex, `./js/${path.basename(minified)}`);
     }
+
+    content = content.replace(/(\.\.\/)+assets\//g, './assets/');
+    content = content.replace(/(\.\/)+assets\//g, './assets/');
 
     const result = await minifyHTML(content, {
       collapseWhitespace: true,
