@@ -55,6 +55,22 @@ h2 {
   margin-bottom: unset;
 }
 
+.menu-toggle {
+  display: block;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+}
+
+/* Quand le menu est ouvert */
+.menu-open nav {
+  display: flex;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 600px) {
@@ -64,5 +80,20 @@ h2 {
 
   .card {
     width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+    /* Cacher le burger en desktop */
+  }
+
+  nav {
+    display: flex !important;
+    /* Toujours visible sur desktop */
+    flex-direction: row;
+    background-color: transparent;
+    /* Retirer fond si souhaité */
   }
 }
