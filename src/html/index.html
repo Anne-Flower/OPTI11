@@ -4,25 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cette page est une aide pratique au quotidien des personnes âgées, un guide général avec accès au guide du matin, de l'après-midi et du soir."/>
     <title>Accueil</title>
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/index.css" />
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container">
-        <div class="logo">
+    <header>
+      <span class="container">
+        <a href="./index.html"  class="logo">
           <img
             class="logo-icon"
             src="../assets/svg/hand-holding-heart-solid.svg"
             alt="logo"
           />
-          <div class="site-name">
+          <p class="site-name">
             <span class="site-title">Mon Petit</span>
             <span class="site-subtitle">Geste</span>
-          </div>
-        </div>
+          </p>
+        </a>
 
         <nav class="nav" aria-label="Navigation principale">
           <ul>
@@ -31,7 +32,7 @@
             <li><a href="./soir.html">Le soir</a></li>
           </ul>
         </nav>
-      </div>
+      </span>
     </header>
 
     <main>
@@ -40,7 +41,6 @@
       <section class="cards">
         <article class="card">
           <a href="./matin.html">
-            <div>
               <svg
                 width="100"
                 height="100"
@@ -53,13 +53,11 @@
                   fill="#FFFFFF"
                 />
               </svg>
-            </div>
             <p>Le matin</p>
           </a>
         </article>
         <article class="card">
           <a href="./apres-midi.html">
-            <div>
               <svg
                 width="101"
                 height="101"
@@ -121,13 +119,11 @@
                   stroke-linecap="round"
                 />
               </svg>
-            </div>
             <p>L'après-midi</p>
           </a>
         </article>
         <article class="card">
           <a href="./soir.html">
-            <div>
               <svg
                 width="100"
                 height="100"
@@ -140,7 +136,6 @@
                   fill="#FFFFFF"
                 />
               </svg>
-            </div>
             <p>Le soir</p>
           </a>
         </article>
@@ -148,27 +143,29 @@
     </main>
 
     <footer>
-      <div class="footer-logo">
-        <a href="./index.html" class="logo-container">
+      <span class="container">
+        <a href="./index.html" class="logo">
           <img
             aria-hidden="true"
             class="logo-icon"
             src="../assets/svg/hand-holding-heart-solid.svg"
             alt="logo"
           />
-          <div class="site-name">
+          <p class="site-name">
             <span class="site-title">Mon Petit</span>
             <span class="site-subtitle">Geste</span>
-          </div>
-        </a>
-        <p>2025 © Kyongsong</p>
-      </div>
+          </p>
+        </p>
+      </a> 
+      <p>2025 © Kyongsong</p>
+    </span>
+
       <ul class="footer-lien" role="navigation" aria-label="pied de page">
         <li><a href="./matin.html">Le matin</a></li>
         <li><a href="./apres-midi.html">L'après midi</a></li>
         <li><a href="./soir.html">Le soir</a></li>
         <li><a href="#">Nous contacter</a></li>
-        <li><a href="#">Mentions légals</a></li>
+        <li><a href="#">Mentions légales</a></li>
       </ul>
     </footer>
   </body>
