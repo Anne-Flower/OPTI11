@@ -13,7 +13,7 @@
     "build:html": "find src -name '*.html' -exec sh -c 'for f; do mkdir -p dist/$(dirname \"$f\" | cut -c5-); html-minifier-terser --collapse-whitespace --remove-comments \"$f\" -o dist/${f#src/}; done' sh {} +",
     "build:css": "find src -name '*.css' -exec sh -c 'for f; do mkdir -p dist/$(dirname \"$f\" | cut -c5-); cleancss -o dist/${f#src/%.css/.min.css} \"$f\"; done' sh {} +",
     "build:purgecss": "purgecss --css 'dist/**/*.min.css' --content 'src/**/*.html' 'src/**/*.js' --output dist/",
-    "build:js": "terser src/**/*.js -o dist --compress --mangle -p",
+    "build:js": "terser src/**/*.js -o dist --compress --mangle",
     "build:images": "npx imagemin 'src/images/*.{jpg,png,svg}' --plugin=mozjpeg --plugin=pngquant --plugin=svgo --out-dir=dist/images",
     "update:html:css": "find dist -name '*.html' -exec sed -i 's/\\.css/\\.min.css/g' {} +",
     "update:html:js": "find dist -name '*.html' -exec sed -i 's/\\.js/\\.min.js/g' {} +",
