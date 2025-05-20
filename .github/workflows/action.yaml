@@ -1,9 +1,9 @@
 name: Deploy on GitHub Pages
 on:
   push:
-    branches: [ "cicd" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "cicd" ]
+    branches: [ "develop" ]
     
 permissions:
   contents: write
