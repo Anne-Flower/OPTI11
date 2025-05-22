@@ -396,7 +396,8 @@ footer ul {
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 2rem;
+  margin: 2rem  auto ;
+  padding: 2rem;
 }
 
 .principal h2 {
