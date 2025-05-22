@@ -7,21 +7,20 @@
     <meta name="description" content="Cette page est une aide pratique au quotidien des personnes âgées, un guide général avec accès au guide du matin, de l'après-midi et du soir."/>
     <title>Accueil</title>
     <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/index.css" />
   </head>
 
   <body>
     <header>
-      <a href="./index.html"  class="logo">
+      <a href="./index.html"  class="logo" tabindex="0">
         <img
           class="logo-icon"
           src="../assets/svg/hand-holding-heart-solid.svg"
-          alt="logo"
+          alt="Logo de mon petit geste, main qui tien un coeur"
         />
-        <p class="site-name">
+        <h2 class="site-name">
           <span class="site-title">Mon Petit</span>
           <strong class="site-subtitle">Geste</strong>
-        </p>
+        </h2>
       </a>
 
       <nav class="nav" aria-label="Navigation principale">
@@ -33,7 +32,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="home">
       <h1>Les gestes du quotidien</h1>
       <h2>Se sentir bien dans un corps et un esprit sain</h2>
       <section class="cards">
@@ -51,7 +50,7 @@
                   fill="#FFFFFF"
                 />
               </svg>
-            <p>Le matin</p>
+            <h3>Le matin</h3>
           </a>
         </article>
         <article class="card">
@@ -117,7 +116,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-            <p>L'après-midi</p>
+            <h3>L'après-midi</h3>
           </a>
         </article>
         <article class="card">
@@ -134,7 +133,7 @@
                   fill="#FFFFFF"
                 />
               </svg>
-            <p>Le soir</p>
+            <h3>Le soir</h3>
           </a>
         </article>
       </section>
@@ -146,23 +145,24 @@
           aria-hidden="true"
           class="logo-icon"
           src="../assets/svg/hand-holding-heart-solid.svg"
-          alt="logo"
+          alt="Logo de mon petit geste, main qui tien un coeur"
         />
-        <p class="site-name">
+        <h2 class="site-name">
           <span class="site-title">Mon Petit</span>
           <strong class="site-subtitle">Geste</strong>
-        </p>
+        </h2>
       </a>
     
       <ul class="footer-lien" role="navigation" aria-label="pied de page">
         <li><a href="./matin.html">Le matin</a></li>
         <li><a href="./apres-midi.html">L'après midi</a></li>
         <li><a href="./soir.html">Le soir</a></li>
-        <li><a href="#">Nous contacter</a></li>
-        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:contact@kyongsong.fr">Nous contacter</a></li>
+        <li><a href="./mentions-legales.html">Mentions légales</a></li>
       </ul>
-
+    
       <p>2025 © Kyongsong</p>
     </footer>
   </body>
 </html>
+
