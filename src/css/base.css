@@ -404,22 +404,18 @@ footer ul {
   margin-bottom: unset;
 }
 
-.mentions-legales h1 {
-  margin-bottom: 1rem;
-  text-align: start;
+.mentions-legales {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 2rem  auto ;
+  padding: 2rem;
 }
 
 .mentions-legales p + p {
   margin-top: 0.5rem;
 }
 
-.mentions-legales {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 850px;
-  margin: 0 auto;
-}
 
 .mentions-legales a {
   color: #005a9c;
