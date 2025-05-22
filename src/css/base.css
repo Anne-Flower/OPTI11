@@ -341,7 +341,7 @@ footer ul {
 
 
 /* Index */
-.home {
+.home{
   flex: 1;
   margin: 2rem;
 
@@ -396,7 +396,7 @@ footer ul {
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 2rem auto;
+  margin: 2rem;
 }
 
 .principal h2 {
