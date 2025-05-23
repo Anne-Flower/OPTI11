@@ -86,7 +86,7 @@ Le site est conçu selon des principes d’accessibilité :
 * **Font Awesome** : pour les icônes SVG
 * **GitHub Pages** : pour l'hébergement
 
-### 1.6. 📝 Évolutions possibles
+### 1.6. Évolutions possibles
 
 * Développer le contenu avec les parties prenantes
 * Ajouter une version audio
@@ -149,6 +149,9 @@ Les contributeurs sont responsables et doivent s'assurer de la qualité de leur 
 
 * Utilisation de GitHub
 * Organisation basée sur Git Flow
+  
+  ![image](https://github.com/user-attachments/assets/49e8b61d-46d3-493d-b48b-900f4e69b9be)
+  
 * Branche `main` pour la production (modifications déployées automatiquement)
 * Branche `develop` principale pour le développement
 * Branches de fonctionnalité pour chaque développeur
