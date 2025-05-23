@@ -51,17 +51,30 @@ html {
 }
 
 body {
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+
   font-family: var(--font-base);
   font-size: var(--text-body);
   line-height: var(--lh-default);
   background-color: var(--color-white);
   color: var(--color-black);
+
   min-height: 100vh;
   letter-spacing: 0.02em;
   word-spacing: 0.16em;
 
   display: flex;
   flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 h1 {
@@ -111,11 +124,16 @@ a:focus,
 
 header {
   background-color: #d6eaf8;
-  background-color: var(--color-secondary);
-  color: var(--color-black);
-  padding: 2rem;
   border-bottom: 2px solid #005a9c;
+  color: black;
+
+  background-color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-black);
+
+  padding: 2rem;
   margin: 0;
+
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -181,9 +199,12 @@ header nav ul {
   padding: 0;
 
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
   align-items: center;
+}
+
+header nav ul > :not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 header nav a {
@@ -196,14 +217,15 @@ p + p {
 }
 
 footer {
+  border-top: 2px solid #005a9c;
+  border-top-color: #005a9c;
+
   width: 100%;
   height: auto;
   background-color: var(--color-secondary);
   background-color: #d6eaf8;
   padding: 1rem 2rem;
   border-top: 2px solid var(--color-primary);
-  border-top-color: #005a9c;
-
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto;
@@ -272,25 +294,31 @@ footer ul {
 
 /* description_card */
 .advice {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
-  align-items: start;
-  padding: 1rem;
-  border-radius: 24px;
+  border: 2px solid #005a9c;
   border: 2px solid var(--color-primary);
-  border-top-color: #005a9c;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: auto 1fr;
+  grid-template-rows: auto; */
+  align-items: start;
+  border-radius: 24px;
+}
+
+.advice > * {
+  margin-bottom: 20px;
 }
 
 .advice > svg {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  width: 100%;
+  height: 60px;
+  width: 60px;
+  /* grid-column: 1 / 2; */
+  /* grid-row: 1 / 3; */
   align-self: center;
   display: inline-block;
 }
-
+/* 
 .advice > h2 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -299,7 +327,7 @@ footer ul {
 .advice > p {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-}
+} */
 
 /* section_card */
 
@@ -334,16 +362,17 @@ footer ul {
 .section-actions {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   width: 100%;
+}
+
+.section-actions > * {
+  margin-bottom: 2rem;
 }
 
 /* Index */
 .home {
-  flex: 1;
   flex: 1 1 auto;
   margin: 2rem;
-
   display: flex;
   flex-direction: column;
 }
@@ -354,13 +383,46 @@ footer ul {
 }
 
 .cards {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
-  flex-flow: row nowrap;
+  /* flex-flow: row nowrap; */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   height: 100%;
+}
+
+.cards > * {
+  margin-bottom: 2rem;
+}
+
+@supports (gap: 1rem) {
+  .cards,
+  .section-actions {
+    gap: 2rem;
+  }
+
+  .cards > *:not(:last-child),
+  .section-actions > * {
+    margin-bottom: 0;
+  }
+
+  header nav ul {
+    gap: 1.5rem;
+  }
+
+  header nav ul > :not(:last-child) {
+    margin-right: 0;
+  }
+
+  .advice {
+    gap: 20px;
+  }
+
+  .advice > * {
+    margin-bottom: 0px;
+  }
 }
 
 .card {
@@ -393,7 +455,7 @@ footer ul {
   max-width: 850px;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   margin: 2rem auto;
   padding: 2rem;
@@ -428,6 +490,7 @@ footer ul {
   height: 1px;
   overflow: hidden;
 }
+
 .skip-link:focus {
   left: 0;
   top: 0;
@@ -437,40 +500,6 @@ footer ul {
   background: #000;
   color: #fff;
   z-index: 1000;
-}
-
-@media screen and (max-width: 450px) {
-  footer ul {
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  header {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  header > a {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  header > nav {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-
-  header nav ul {
-    flex-direction: column;
-  }
-
-  header nav ul li {
-    width: 100%;
-    text-align: left;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -502,28 +531,29 @@ footer ul {
     grid-row: 3 / 4;
   }
 
-  .advice {
+  /* .advice {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     justify-content: center;
     align-items: center;
-  }
+  } */
 
-  .advice > svg {
+  /* .advice > svg {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-  }
+  } */
 
   .advice > h2 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 3; */
+    width: 100%;
     text-align: center !important;
   }
-  .advice > p {
+  /* .advice > p {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     text-align: center;
-  }
+  } */
 
   h1 {
     font-size: 2rem;
@@ -533,6 +563,59 @@ footer ul {
   }
 
   .cards {
-    flex-flow: column wrap;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+  }
+
+  header nav ul > :not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  /* .cards > *:not(:last-child) {
+    margin-bottom: 10rem;
+  } */
+
+  @supports (gap: 1rem) {
+    header nav ul {
+      gap: 1.5rem;
+    }
+
+    header nav ul > :not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header > a {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  header > nav {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer ul {
+    height: auto;
   }
 }
