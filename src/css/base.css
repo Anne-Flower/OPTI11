@@ -24,7 +24,8 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --font-base: "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-base: "Atkinson Hyperlegible", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-base: "Atkinson Hyperlegible", system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -58,7 +59,7 @@ body {
   min-height: 100vh;
   letter-spacing: 0.02em;
   word-spacing: 0.16em;
-  
+
   display: flex;
   flex-direction: column;
 }
@@ -102,12 +103,14 @@ a {
   text-decoration: none;
 }
 
-a:focus, [tabindex]:focus {
+a:focus,
+[tabindex]:focus {
   outline: 3px solid var(--color-primary);
   outline-offset: 4px;
 }
 
 header {
+  background-color: #d6eaf8;
   background-color: var(--color-secondary);
   color: var(--color-black);
   padding: 2rem;
@@ -117,7 +120,7 @@ header {
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  gap: 20px
+  gap: 20px;
 }
 
 header > a {
@@ -183,7 +186,6 @@ header nav ul {
   align-items: center;
 }
 
-
 header nav a {
   color: #000000;
   font-size: var(--text-h3);
@@ -192,7 +194,6 @@ header nav a {
 p + p {
   margin-top: 2rem;
 }
-
 
 footer {
   width: 100%;
@@ -213,7 +214,6 @@ footer > a {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-
 
 footer > nav {
   grid-column: 2 / 3;
@@ -245,7 +245,6 @@ footer ul {
   height: 120px;
   flex-wrap: wrap;
 }
-
 
 /*logo*/
 .site-name {
@@ -339,22 +338,23 @@ footer ul {
   width: 100%;
 }
 
-
 /* Index */
-.home{
+.home {
   flex: 1;
+  flex: 1 1 auto;
   margin: 2rem;
 
   display: flex;
   flex-direction: column;
 }
 
-.home h1, .home h2{
+.home h1,
+.home h2 {
   text-align: center;
 }
 
 .cards {
-  flex:1;
+  flex: 1;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -363,8 +363,8 @@ footer ul {
   height: 100%;
 }
 
-.card{
-  width: 100%; 
+.card {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -386,7 +386,6 @@ footer ul {
   font-weight: 400;
 }
 
-
 /* Moment */
 .principal {
   display: flex;
@@ -396,7 +395,7 @@ footer ul {
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 2rem  auto ;
+  margin: 2rem auto;
   padding: 2rem;
 }
 
@@ -408,14 +407,13 @@ footer ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 2rem  auto ;
+  margin: 2rem auto;
   padding: 2rem;
 }
 
 .mentions-legales p + p {
   margin-top: 0.5rem;
 }
-
 
 .mentions-legales a {
   color: #005a9c;
@@ -449,22 +447,22 @@ footer ul {
 
 @media screen and (max-width: 650px) {
   header {
-    grid-template-columns: 1fr ;
-    grid-template-rows: auto auto ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   header > a {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-  
+
   header > nav {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
-  
+
   header nav ul {
     flex-direction: column;
   }
@@ -485,7 +483,6 @@ footer ul {
     grid-template-rows: auto auto auto;
     row-gap: 30px;
     justify-content: start;
-
   }
 
   footer > a {
@@ -496,7 +493,7 @@ footer ul {
   footer > nav {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin-left: 0 ;
+    margin-left: 0;
     width: 100%;
   }
 
@@ -529,12 +526,12 @@ footer ul {
   }
 
   h1 {
-    font-size: 2rem ;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
   }
-  
+
   .cards {
     flex-flow: column wrap;
   }
